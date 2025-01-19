@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resultados</title>
+
+  <!-- Exemplo de inclusão de uma fonte do Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #121212;
+      color: #FFFFFF;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+      font-weight: 600;
+      text-align: center;
+      font-size: 2rem;
+    }
+
+    h2 {
+      margin: 20px 0 10px 0;
+      font-size: 1.5rem;
+      text-align: center;
+      font-weight: 400;
+    }
+
+    .content-container {
+      width: 100%;
+      max-width: 800px;
+      background-color: #1f1f1f;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .image-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .image-section img {
+      max-width: 100%;
+      height: auto;
+      border: 2px solid #2c2c2c;
+      border-radius: 8px;
+    }
+
+    .crops-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .crops-section img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      border: 2px solid #2c2c2c;
+    }
+
+    a {
+      display: inline-block;
+      text-decoration: none;
+      background-color: #3f51b5;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    a:hover {
+      background-color: #303f9f;
+    }
+
+    .back-button {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Resultados da Detecção</h1>
+
+  <div class="content-container">
+    <div class="image-section">
+      <h2>Imagem Original com Detecção</h2>
+      <img src="/detections/{{ detection_image }}" alt="Detecção"/>
+    </div>
+
+    <div class="crops-section">
+      <h2 style="grid-column: 1 / -1; text-align:center; margin-bottom: 10px;">Placas Recortadas</h2>
+      <!-- Loop dos crops gerados -->
+      {% for crop in crops %}
+        <img src="/crops/{{ crop }}" alt="Cropped Plate"/>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="back-button">
+    <a href="/">Voltar</a>
+  </div>
+</body>
+</html>

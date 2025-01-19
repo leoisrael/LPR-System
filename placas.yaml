@@ -1,0 +1,5 @@
+path: C:/Users/israel.albuquerque_s/Documents/Pessoal/LP-recog/datasets/placas
+train: images/train
+val: images/val
+nc: 1
+names: ['placa']

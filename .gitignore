@@ -1,0 +1,33 @@
+# Ignorar ambientes virtuais
+venv/
+yolo_env/
+
+# Ignorar arquivos grandes gerados por bibliotecas
+*.pyd
+*.dll
+*.lib
+*.so
+*.dylib
+
+# Ignorar diretórios específicos do PyTorch e modelos treinados gigantes
+__pycache__/
+*.pt
+*.onnx
+
+# Ignorar arquivos temporários
+uploads/
+detections/
+crops/
+*.tmp
+*.log
+
+# Ignorar diretórios de saída do YOLOv8 (caso não precise deles no repositório)
+runs/
+
+# Ignorar arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Ignorar configurações locais de IDEs
+.vscode/
+.idea/
