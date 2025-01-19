@@ -37,9 +37,7 @@ The graphs below, generated during training, illustrate the evolution of the met
 - **Precision and Recall:** Show the model's ability to make correct detections.
 - **mAP:** Demonstrates the overall precision of the model across multiple IoU thresholds.
 
-**[PLACEHOLDER: Insert Loss Graph Here]**
-
-**[PLACEHOLDER: Insert mAP Graph Here]**
+![Image](https://github.com/user-attachments/assets/1bd990b2-3e4d-440c-b553-4498b115e420)
 
 The results indicated solid performance, with **Precision** and **Recall** values exceeding 95% and a mAP@50 of approximately 94%.
 
