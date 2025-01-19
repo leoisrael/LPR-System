@@ -4,6 +4,8 @@
 
 The LPR-System is a system designed for vehicle license plate recognition using modern computer vision and deep learning techniques. It was developed based on the YOLOv8 model (You Only Look Once, version 8), one of the most advanced frameworks for real-time object detection. This project aims to provide a complete pipeline that includes plate detection in images and cropping the detected areas for further processing.
 
+![Image](https://github.com/user-attachments/assets/f637ddd3-18f7-4701-bdde-ebe3390107ee)
+
 ## Methodology
 
 ### Model Architecture
@@ -97,4 +99,8 @@ python app.py
 ```
 
 The system will be available at: [http://127.0.0.1:5000](http://127.0.0.1:5000).
+
+
+### Dataset
+The dataset used for training was obtained from [benchmarks](https://github.com/openalpr/benchmarks).
 
